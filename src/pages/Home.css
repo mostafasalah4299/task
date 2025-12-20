@@ -1,12 +1,18 @@
-/* Page title */
+body {
+  background-color: #01191d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
   text-align: center;
   margin: 30px 0;
   font-size: 32px;
   font-weight: 600;
+  color: rgb(9, 240, 105);
 }
 
-/* Single product card */
 .product-card {
   background: #fff;
   border-radius: 10px;
@@ -22,7 +28,6 @@ h2 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Product image */
 .product-card img {
   width: 100%;
   height: 220px;
@@ -30,14 +35,12 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Product title */
 .product-card h1 {
   font-size: 16px;
   margin-bottom: 10px;
   color: #333;
 }
 
-/* Price */
 .product-price {
   font-size: 18px;
   font-weight: 600;
@@ -45,7 +48,6 @@ h2 {
   margin: 10px 0;
 }
 
-/* Description */
 .product-card p {
   font-size: 14px;
   color: #666;

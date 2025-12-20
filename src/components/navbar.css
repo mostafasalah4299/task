@@ -55,7 +55,7 @@ cursor: pointer;
 
 .top-navbar {
     height: 40px;
-    background:transparent;
+    background:white;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
