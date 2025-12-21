@@ -1,5 +1,15 @@
 import React from "react";
 import "./footer.css";
+import { FaFacebookF  } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaGooglePlusG } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+
+
 
 function Footer() {
     return (
@@ -8,16 +18,16 @@ function Footer() {
             <div className="footer-col">
                 <h4>Contact Info</h4>
 
-                <p>📍 123 Street, Old Trafford, NewYork, USA</p>
-                <p>✉️ info@sitename.com</p>
-                <p>📞 +457 789 789 65</p>
+                <p><FaMapMarkerAlt size={24} color="red" /> 123 Street, Old Trafford, NewYork, USA</p>
+                <p><FaEnvelope size={24} color="red" /> info@sitename.com</p>
+                <p><FaPhone size={24} color="red" /> +457 789 789 65</p>
 
                 <div className="social-icons">
-                    <a href="#">f</a>
-                    <a href="#">t</a>
-                    <a href="#">g+</a>
-                    <a href="#">▶</a>
-                    <a href="#">📷</a>
+                    <a href="https://www.facebook.com/" target="_blank"><FaFacebookF size={24} color="#1877f2" /></a>
+                    <a href="https://twitter.com/" target="_blank"><FaTwitter size={24} color="#1da1f2" /></a>
+                    <a href="https://plus.google.com/" target="_blank"><FaGooglePlusG size={24} color="#db4437" /></a>
+                    <a href="https://www.youtube.com/" target="_blank"><FaYoutube size={24} color="#ff0000" /></a>
+                    <a href="https://www.instagram.com/" target="_blank"><FaInstagram size={24} color="#e1306c" /></a>
                 </div>
             </div>
 
@@ -52,7 +62,7 @@ function Footer() {
 
                 <div className="newsletter-box">
                     <input type="email" placeholder="Enter Email Address" />
-                    <button>📩</button>
+                    <button><FaEnvelope size={24} color="white" /></button>
                 </div>
             </div>
         </div>
@@ -61,11 +71,11 @@ function Footer() {
             <p>© 2020 All Rights Reserved by Bestwebcreator</p>
 
             <div className="payments">
-            <span>VISA</span>
-            <span>DISC</span>
-            <span>MC</span>
-            <span>PayPal</span>
-            <span>AMEX</span>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/visa.png" alt="VISA" /></a>
+            <a href="#"><img src="https://bestwebcreator.com/shopwise/demo/assets/images/discover.png" alt="DISC" /></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MC" /></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" /></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/amex.png" alt="AMEX" /></a>
             </div>
         </div>
         </footer>

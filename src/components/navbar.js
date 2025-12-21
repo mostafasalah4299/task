@@ -1,10 +1,10 @@
 import React from "react";
 import "./navbar.css";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <>
-      {/* TOP NAVBAR */}
       <div className="top-navbar">
         <div className="navbar-left">
           <select>
@@ -23,7 +23,7 @@ function Navbar() {
         <div className="navbar-right">
           <a href="#">compare</a>
           <a href="#">wishlist</a>
-          <a href="#">login</a>
+          <a href="/signin">sign in</a>
         </div>
       </div>
 
@@ -37,9 +37,9 @@ function Navbar() {
         </div>
 
         <div className="navbar-center">
-          <a href="#">home</a>
+          <Link to="/">home</Link>
           <a href="#">pages</a>
-          <a href="#">products</a>
+          <Link to="/product/1">products</Link>
           <a href="#">blog</a>
           <a href="#">contact us</a>
         </div>

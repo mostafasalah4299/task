@@ -1,5 +1,5 @@
 .footer {
-  background: #1f2224;
+  background: black;
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -16,13 +16,16 @@
   font-size: 18px;
 }
 
-.footer-col p,
+
 .footer-col li {
   font-size: 14px;
   color: #cfcfcf;
   margin-bottom: 10px;
   list-style: none;
   cursor: pointer;
+}
+.footer-col p{
+  line-height: 1.6;
 }
 
 .footer-col li:hover {

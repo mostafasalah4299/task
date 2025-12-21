@@ -1,5 +1,5 @@
 body {
-  background-color: #01191d;
+  background-color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ h2 {
   margin: 30px 0;
   font-size: 32px;
   font-weight: 600;
-  color: rgb(9, 240, 105);
+  color: rgb(0, 0, 0);
 }
 
 .product-card {
