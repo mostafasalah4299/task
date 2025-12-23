@@ -44,9 +44,10 @@ function Navbar() {
           <a href="#">contact us</a>
         </div>
 
-        <div className="navbar-right">
+          <div className="navbar-right">
           <a href=""><i className="fa-solid fa-magnifying-glass"></i></a>
-          <a href="#"><i className="fa-solid fa-cart-shopping"></i></a>
+          <Link to="/cart-details"><i className="fa-solid fa-bag-shopping"></i></Link>
+          <a href="#"><i className="fa-solid fa-user"></i></a>
         </div>
       </div>
     </>
