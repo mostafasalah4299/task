@@ -1,30 +1,21 @@
-    import React, { useEffect, useState } from 'react';
-    import './CartDetails.css';
-    import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import './CartDetails.css';
 
-    function CartDetails() {
+function CartDetails() {
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/carts/1')
-        .then(async res => {
-            const products = res.data.products;
-
-            const detailedProducts = await Promise.all(
-            products.map(async item => {
-                const productRes = await axios.get(
-                `https://fakestoreapi.com/products/${item.productId}`
-                );
-                return {
-                ...productRes.data,
-                quantity: item.quantity
-                };
-            })
-            );
-
-            setCartItems(detailedProducts);
-        });
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+            setCartItems(JSON.parse(storedCart));
+        }
     }, []);
+
+    const removeItem = (id) => {
+        const updatedCart = cartItems.filter(item => item.id !== id);
+        setCartItems(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
 
     const total = cartItems.reduce(
         (sum, item) => sum + item.price * item.quantity,
@@ -46,6 +37,7 @@
                     <h3>{item.title}</h3>
                     <p>Price: ${item.price.toFixed(2)}</p>
                     <p>Quantity: {item.quantity}</p>
+                    <button onClick={() => removeItem(item.id)} className="remove-item-x-button">X</button>
                 </div>
                 </div>
             ))}

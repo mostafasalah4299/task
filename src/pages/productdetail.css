@@ -21,6 +21,7 @@
 .product-actions {
     margin-top: 20px;
 }
+
 .product-actions button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -36,4 +37,18 @@
     justify-content: center;
     height: 100%;
     color: rgb(0, 0, 0);
+}
+
+.add-to-cart-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

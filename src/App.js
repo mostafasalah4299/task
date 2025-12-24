@@ -7,7 +7,6 @@ import Productdetails from './pages/Productdetails';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Signin from './pages/Signin';
-// import Cart from './pages/Cart';
 import CartDetails from './pages/CartDetails';
 
 
@@ -20,7 +19,6 @@ function App() {
         <Route path="/product/:id" element={<Productdetails />} />
         <Route path="/navbar" element={<Navbar />} />
         <Route path="/signin" element={<Signin />} />
-        {/* <Route path="/cart" element={<Cart />} /> */}
         <Route path="/cart-details" element={<CartDetails />} />
     </Routes>
     <Footer />

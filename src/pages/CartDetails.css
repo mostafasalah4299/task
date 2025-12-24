@@ -1,4 +1,4 @@
-    .cart-details-container {
+.cart-details-container {
     padding: 20px;
     max-width: 900px;
     margin: 20px auto;
@@ -18,13 +18,37 @@
     .cart-item-card {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    border: 1px solid #ddd;
     padding: 15px;
-    border: 1px solid #eeeeee;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    }
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for positioning the 'X' button */
+}
 
+.remove-item-x-button {
+    position: absolute; /* Position the button relative to the card */
+    top: 40px;
+    right: 10px;
+    background-color: #dc3545; /* Red color for remove button */
+    color: #ffffffdc;
+    border: none;
+    border-radius: 50px; /* Make it circular */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0; /* Remove default padding */
+    line-height: 1; /* Adjust line height for vertical centering */
+}
+
+.remove-item-x-button:hover {
+    background-color: #c82333;
+}
     .cart-item-card img {
     width: 80px;
     height: 80px;

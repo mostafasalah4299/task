@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import './Home.css';
+import './ProductList.css';
 import { Link, useNavigate } from 'react-router-dom';
-import "./productdetail.css" 
+import "./productdetail.css"
 
-function Home() {
+function ProductList() {
     const [product, setProduct] = useState([]);
-    const [showNotification, setShowNotification] = useState(false); 
+    const [showNotification, setShowNotification] = useState(false);
+    const navigate = useNavigate();
+
     useEffect(
         () => {
             axios.get('https://fakestoreapi.com/products')
@@ -28,10 +30,10 @@ function Home() {
             cart.push({ ...productToAdd, quantity: 1 });
         }
         localStorage.setItem('cart', JSON.stringify(cart));
-        setShowNotification(true); 
+        setShowNotification(true);
         setTimeout(() => {
-            setShowNotification(false); 
-        }, 3000); 
+            setShowNotification(false);
+        }, 3000);
     };
 
     return (
@@ -62,7 +64,7 @@ function Home() {
                 ))}
             </div>
         </div>
-        {showNotification && ( 
+        {showNotification && (
             <div className="add-to-cart-notification">
                 Item added to cart!
             </div>
@@ -70,4 +72,4 @@ function Home() {
         </>
     );
 }
-export default Home;
+export default ProductList;

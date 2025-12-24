@@ -41,13 +41,13 @@ function Navbar() {
           <a href="#">pages</a>
           <Link to="/product/1">products</Link>
           <a href="#">blog</a>
-          <a href="#">contact us</a>
+          <a href="/contact-us">contact us</a>
         </div>
 
           <div className="navbar-right">
-          <a href=""><i className="fa-solid fa-magnifying-glass"></i></a>
-          <Link to="/cart-details"><i className="fa-solid fa-bag-shopping"></i></Link>
-          <a href="#"><i className="fa-solid fa-user"></i></a>
+          <a href="/search"><i className="fa-solid fa-magnifying-glass"></i></a>
+          <a href="/cart-details"><i className="fa-solid fa-bag-shopping"></i></a>
+          <a href="/signin"><i className="fa-solid fa-user"></i></a>
         </div>
       </div>
     </>
