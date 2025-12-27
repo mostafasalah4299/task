@@ -1,8 +1,15 @@
 import React from "react";
+import { useState } from "react"; 
 import "./navbar.css";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [searchTerm, setSearchTerm] = useState(""); 
+
+  const handleSearch = () => {
+    console.log("Searching for:", searchTerm);
+  };
+
   return (
     <>
       <div className="top-navbar">
@@ -39,13 +46,24 @@ function Navbar() {
         <div className="navbar-center">
           <Link to="/">home</Link>
           <a href="#">pages</a>
-          <Link to="/product/1">products</Link>
+          <Link to="/products">products</Link>
           <a href="#">blog</a>
           <a href="/contact-us">contact us</a>
         </div>
 
           <div className="navbar-right">
-          <a href="/search"><i className="fa-solid fa-magnifying-glass"></i></a>
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            <button onClick={handleSearch} className="search-button">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
           <a href="/cart-details"><i className="fa-solid fa-bag-shopping"></i></a>
           <a href="/signin"><i className="fa-solid fa-user"></i></a>
         </div>

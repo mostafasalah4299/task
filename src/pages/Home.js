@@ -2,8 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./productdetail.css" 
+
 
 function Home() {
     const [product, setProduct] = useState([]);
@@ -36,6 +37,15 @@ function Home() {
 
     return (
         <>
+            {/* New hero section */}
+            <section className="hero-section">
+                <div className="hero-container">
+                    <img src="https://lh3.googleusercontent.com/gg-dl/ABS2GSn7DBsw3u11hbp7yAlnQFrZI1G4MrQQQyrpA2xHvoRCIlMMWEIOx_N8z4iZEtY7lIBTkI-6w7BrfV1UUmDAw4Y24v_LXE0pO8wqrPF4Qf0HNNfcMzPqhpsJclBYp8xU07Wt2gqQZPFTe6mlybFrQXw-1P-Rau5YsMVip4VkG_HfYA3SvQ=s1024-rj" alt="Hero Banner" className="hero-image" />
+                    <h1>Welcome to Mostafa's Store</h1>
+                    <p>Discover our curated collection of top-quality products at unbeatable prices</p>
+                    <Link to="/products" className="hero-cta">Shop Now</Link>
+                </div>
+            </section>
         <h2>Product List</h2>
         <div className='container'>
 
