@@ -22,7 +22,7 @@
 }
 
 .categories-list li.active {
-    background-color: #007bff; /* Example active color */
+    background-color: #007bff; 
     color: white;
 }
 
