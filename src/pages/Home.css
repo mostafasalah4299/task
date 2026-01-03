@@ -195,7 +195,7 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .hero-section {
     height: 70vh;
   }

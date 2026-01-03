@@ -1,8 +1,8 @@
-import axios from 'axios';
 import React from 'react';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
-import './Home.css';
 import { Link } from 'react-router-dom';
+import './Home.css';
 import "./productdetail.css" 
 
 

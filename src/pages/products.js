@@ -75,16 +75,16 @@ function Products() {
             <div className="product-grid">
                 {products.map(product => (
                     <div className="product-card" key={product.id}>
-                        <Link to={`/product-details/${product.id}`}>
+                        <Link to={`/product/${product.id}`}>
                             <img src={product.image} alt={product.title} className="product-image" />
-                            <div className="product-body">
-                                <h3 className="product-title">{product.title}</h3>
-                                <p className="product-price">${product.price}</p>
-                            </div>
                         </Link>
+                        <div cla ssName="product-body">
+                            <h3 className="product-title">{product.title}</h3>
+                            <p className="product-price">${product.price}</p>
+                        </div>
                         <button className="add-to-cart-button" onClick={() => addToCart(product)}>Add to Cart</button>
                     </div>
-                ))}
+                ))}\
             </div>
 
             {showNotification && (

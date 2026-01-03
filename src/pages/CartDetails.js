@@ -17,6 +17,19 @@ function CartDetails() {
         localStorage.setItem('cart', JSON.stringify(updatedCart));
     };
 
+    const handleQuantityChange = (id, delta) => {
+        const updatedCart = cartItems.map(item => {
+            if (item.id === id) {
+                const newQuantity = item.quantity + delta;
+                return { ...item, quantity: newQuantity > 0 ? newQuantity : 1 };
+            }
+            return item;
+        }).filter(item => item.quantity > 0);
+
+        setCartItems(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    };
+
     const total = cartItems.reduce(
         (sum, item) => sum + item.price * item.quantity,
         0
@@ -36,7 +49,11 @@ function CartDetails() {
                 <div className="cart-item-info">
                     <h3>{item.title}</h3>
                     <p>Price: ${item.price.toFixed(2)}</p>
-                    <p>Quantity: {item.quantity}</p>
+                    <div className="quantity-controls">
+                        <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
+                        <span>{item.quantity}</span>
+                        <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+                    </div>
                     <button onClick={() => removeItem(item.id)} className="remove-item-x-button">X</button>
                 </div>
                 </div>
