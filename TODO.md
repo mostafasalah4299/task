@@ -1,0 +1,5 @@
+- [x] Remove CSS import from src/index.js
+- [x] Remove CSS import from src/App.js
+- [x] Remove CSS import from src/pages/Home.js and update component to use Bootstrap classes
+- [x] Remove CSS import from src/components/navbar.js and update component to use Bootstrap classes
+- [ ] Test the application for responsiveness and functionality
