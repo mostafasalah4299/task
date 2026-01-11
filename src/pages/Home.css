@@ -123,3 +123,88 @@ h2 {
     cursor: pointer;
     text-decoration: none;
 }
+
+.hero-section {
+  position: relative;
+  height: 90vh;
+  background-image: url("c:\Users\xps\Desktop\unnamed (1).jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: rgb(241, 237, 237);
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-container h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #000;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-container p {
+    font-size: 1rem;
+  }
+}

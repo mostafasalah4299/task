@@ -1,9 +1,10 @@
-import axios from 'axios';
 import React from 'react';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
-import { Link, useNavigate } from 'react-router-dom';
 import "./productdetail.css" 
+
 
 function Home() {
     const [product, setProduct] = useState([]);
@@ -36,30 +37,39 @@ function Home() {
 
     return (
         <>
-        <h2>Product List</h2>
-        <div className='container'>
+            <section className="hero-section">
+                <div className="hero-container">
+                    <h1>Welcome to Mostafa's Store</h1>
+                    <p>Discover our curated collection of top-quality products at unbeatable prices</p>
+                    <Link to="/products" className="hero-cta">Shop Now</Link>
+                </div>
+            </section>
+        <div className="product-section">
+            <h2>Product List</h2>
+            <div className='container'>
 
-            <div className="row">
-                {product.map((item) => (
-                    <div className="col-4" key={item.id}>
-                        <div className='product-card'>
-                            <div className='product-img'>
-                                <img src={item.image} alt={item.title} />
-                            </div>
-                            <div className='product-body'>
+                <div className="row">
+                    {product.map((item) => (
+                        <div className="col-4" key={item.id}>
+                            <div className='product-card'>
+                                <div className='product-img'>
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                                <div className='product-body'>
 
-                                <h1>{item.title}</h1>
-                                <p>{item.description}</p>
-                                <p className="product-price">{item.price} EGP</p>
+                                    <h1>{item.title}</h1>
+                                    <p>{item.description}</p>
+                                    <p className="product-price">{item.price} EGP</p>
 
-                            </div>
-                            <div className='product-actions'>
-                                <button onClick={() => addToCart(item)}>Add to Cart</button>
-                                <Link to={`/product/${item.id}`}>View Details</Link>
+                                </div>
+                                <div className='product-actions'>
+                                    <button onClick={() => addToCart(item)}>Add to Cart</button>
+                                    <Link to={`/product/${item.id}`}>View Details</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
         {showNotification && ( 

@@ -24,26 +24,26 @@
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Added for positioning the 'X' button */
-}
+    position: relative; 
+    }
 
 .remove-item-x-button {
-    position: absolute; /* Position the button relative to the card */
+    position: absolute; 
     top: 40px;
     right: 10px;
-    background-color: #dc3545; /* Red color for remove button */
+    background-color: #dc3545; 
     color: #ffffffdc;
     border: none;
-    border-radius: 50px; /* Make it circular */
-    width: 30px; /* Set a fixed width */
-    height: 30px; /* Set a fixed height */
+    border-radius: 50px; 
+    width: 30px; 
+    height: 30px; 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     cursor: pointer;
-    padding: 0; /* Remove default padding */
-    line-height: 1; /* Adjust line height for vertical centering */
+    padding: 0; 
+    line-height: 1; 
 }
 
 .remove-item-x-button:hover {
@@ -71,6 +71,28 @@
     margin: 0;
     color: #555555;
     font-size: 14px;
+    }
+
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .quantity-controls button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .quantity-controls span {
+        margin: 0 10px;
+        font-size: 16px;
     }
 
     .cart-total {
